@@ -1,10 +1,10 @@
 const appRouter = function(app) {
 	app.get("/", function(req, res) {
 		if (!req.query.number) {
-			return res.send({"status": "error", "message": "missing number"});
+			return res.send({"status": "error", "message": "204 - No Content - missing number"});
 		} 
 		if (req.query.number<0) {
-			return res.send({"status": "error", "message": "number should be positive"});
+			return res.send({"status": "error", "message": "204 - No Content - number should be positive"});
 		}
 		else {
 			result = fibonacci(req.query.number);
